@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ca Moroni Collection - Timeless Italian Hospitality</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300,400,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <button class="icon-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <span class="hamburger" aria-hidden="true"><span></span></span>
+        <span class="icon-label">MENU</span>
+      </button>
+
+      <a class="brand brand-logo" href="#top" aria-label="Inicio"><img id="brandLogo" src="assets/camoroni_logo_white.png" data-logo-white="assets/camoroni_logo_white.png" data-logo-gold="assets/camoroni_logo_gold.png" alt="Ca Moroni Collection" /></a>
+
+      <div class="header-actions">
+        
+          <div class="lang-switch" aria-label="Language selector">
+            <button class="lang-btn is-active" type="button" data-lang="es">ES</button>
+            <button class="lang-btn" type="button" data-lang="en">EN</button>
+            <button class="lang-btn" type="button" data-lang="it">IT</button>
+          </div>
+<a class="btn btn-ghost" href="#rooms" data-i18n="hero_cta_secondary">SUITES</a>
+        <button class="btn btn-primary" id="openBookingBtn" data-i18n="nav_book">BOOK</button>
+      </div>
+    </div>
+  </header>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menú principal">
+      <div class="drawer-top">
+        <span class="drawer-title" data-i18n="drawer_title">Navegación</span>
+        <button class="icon-btn close-btn" id="closeDrawerBtn" aria-label="Cerrar menú">
+          <span class="x" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <nav class="drawer-nav">
+        <a href="#experience" class="drawer-link" data-i18n="nav_experience">Experiencia</a>
+        <a href="#rooms" class="drawer-link" data-i18n="nav_rooms">Habitaciones</a>
+        <a href="#dining" class="drawer-link" data-i18n="nav_dining">Gastronomía</a>
+        <a href="#spa" class="drawer-link" data-i18n="nav_spa">Productos</a>
+        <a href="#gallery" class="drawer-link" data-i18n="nav_gallery">Galería</a>
+        <a href="#contact" class="drawer-link" data-i18n="nav_contact">Contacto</a>
+      </nav>
+
+      <div class="drawer-foot">
+        <p class="fine" data-i18n="rooms_subtitle">Maqueta premium para validar estructura, ritmo y tono visual.</p>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="hero" aria-label="Presentación principal">
+      <div class="hero-media">
+        <div class="hero-youtube" aria-hidden="true">
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/_WKN12Tofys?autoplay=1&mute=1&start=0&end=38&loop=1&playlist=_WKN12Tofys"
+  title="YouTube video player"
+  frameborder="0"
+  allow="autoplay; fullscreen"
+  allowfullscreen>
+</iframe>
+        </div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <div class="kicker">Timeless Italian Hospitality</div>
+          <h1 class="hero-title" data-i18n="hero_title">CA Moroni Collection</h1>
+          <p class="hero-lead">
+            Comodidad, lujo y ubicación en el corazón de la ciudad de Bérgamo
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#rooms" data-i18n="hero_cta_primary">Habitaciones</a>
+            <a class="btn btn-outline" href="#experience">Ver experiencia</a>
+          </div>
+
+          <button class="scroll-indicator" id="scrollDownBtn" aria-label="Bajar a la siguiente sección">
+            <span class="chev" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <aside class="booking-card" id="bookingCard" aria-label="Booking">
+          <div class="booking-head">
+            <h3 data-i18n="booking_title">Booking Your Hotel</h3>
+          </div>
+
+          <form class="booking-form" id="bookingForm">
+            <label class="field">
+              <span class="label" data-i18n="booking_checkin">Check In</span>
+              <input type="date" name="checkin" required />
+            </label>
+
+            <label class="field">
+              <span class="label" data-i18n="booking_checkout">Check Out</span>
+              <input type="date" name="checkout" required />
+            </label>
+
+            <div class="field-row">
+              <label class="field">
+                <span class="label" data-i18n="booking_guests">Guests</span>
+                <select name="guests" required>
+                  <option value="1">1 Adult</option>
+                  <option value="2" selected>2 Adults</option>
+                  <option value="3">3 Adults</option>
+                  <option value="4">4 Adults</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span class="label" data-i18n="booking_rooms">Rooms</span>
+                <select name="rooms" required>
+                  <option value="1" selected>1 Room</option>
+                  <option value="2">2 Rooms</option>
+                  <option value="3">3 Rooms</option>
+                </select>
+              </label>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">
+              Check Availability
+            </button>
+
+            <div class="booking-result" id="bookingResult" role="status" aria-live="polite"></div>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-ivory" id="experience">
+      <div class="container">
+        <div class="grid-2">
+          <div class="panel-text">
+            <h2 class="display" data-i18n="rooms_title">European Charm<br/>full of luxury</h2>
+            <p class="body">
+              En una ciudad vibrante y llena de estímulos, el verdadero lujo ha cambiado de definición. Ya no se trata solo de servicios opulentos, sino de algo mucho más valioso: el espacio, la privacidad y el tiempo. Poseer un apartamento privado, aunque sea temporalmente, es adueñarse de un santuario personal en medio del epicentro urbano.
+            </p>
+            <p class="body subtle">
+              Una experiencia auténtica que le permite vivir la ciudad como un residente, no solo como un visitante. Le da la base para crear una rutina propia, disfrutando del silencio en un entorno elegante y privado.
+            </p>
+            <a class="link" href="#gallery">Descubrir la galería <span aria-hidden="true">→</span></a>
+          </div>
+
+          <figure class="panel-media media-hover">
+            <img
+              src="assets/Fotos HQ/01_Reception/01_Reception-2.webp"
+              alt="Fachada de hotel de lujo"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ivory" id="rooms">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Condominio de lujo</div>
+            <h2 class="section-title">Hospedaje con carácter</h2>
+          </div>
+        </div>
+
+        <div class="cards" id="roomsGrid">
+          <article class="room-card" data-type="room">
+            <figure class="room-media media-hover">
+              <img src="assets/Fotos HQ/fotos webp/Room1/01_Room-4 (1).webp" alt="Deluxe Room" loading="lazy">
+            </figure>
+            <div class="room-body">
+              <div class="stars" aria-label="5 estrellas">★★★★★</div>
+              <h3 class="room-title" data-i18n="room_king_title">Deluxe Room</h3>
+              <p class="fine" data-i18n="room_king_desc">Minimalismo cálido, vista urbana y detalles de mármol. Para 2 personas.</p>
+              <button class="btn btn-ghost btn-sm" data-modal-open="king" data-i18n="view_details">View Details →</button>
+            </div>
+          </article>
+
+          <article class="room-card" data-type="room">
+            <figure class="room-media media-hover">
+              <img src="assets/Fotos HQ/fotos webp/Room2/02_Room-5.webp" alt="Signature Suite" loading="lazy">
+            </figure>
+            <div class="room-body">
+              <div class="stars" aria-label="5 estrellas">★★★★★</div>
+      
+              <h3 class="room-title" data-i18n="room_suite_title">Deluxe Room - 3 people - 3 people</h3>
+              <p class="fine" data-i18n="room_suite_desc">Espacio privado, bar discreto y baño premium. Para 3 personas.</p>
+              <button class="btn btn-ghost btn-sm" data-modal-open="suite" data-i18n="view_details">View Details →</button>
+            </div>
+          </article>
+
+          <article class="room-card" data-type="room">
+            <figure class="room-media media-hover">
+              <img src="assets/Fotos HQ/fotos webp/Room3/03_Room-9.webp" alt="Deluxe Room - 6 people" loading="lazy">
+            </figure>
+            <div class="room-body">
+              <div class="stars" aria-label="5 estrellas">★★★★★</div>
+              <h3 class="room-title" data-i18n="room_deluxe_title">Deluxe Room - 6 people</h3>
+              <p class="fine" data-i18n="room_deluxe_desc">Texturas premium, iluminación suave y calma. Para 6 personas.</p>
+              <button class="btn btn-ghost btn-sm" data-modal-open="deluxe" data-i18n="view_details">View Details →</button>
+            </div>
+          </article>
+
+          <article class="room-card" data-type="suite">
+            <figure class="room-media media-hover">
+              <img src="assets/Fotos HQ/fotos webp/Room11/11_Room (1).webp" alt="Suite Room" loading="lazy">
+            </figure>
+            <div class="room-body">
+              <div class="stars" aria-label="5 estrellas">★★★★★</div>
+              <h3 class="room-title" data-i18n="room_apartment_title">Suite Room</h3>
+              <p class="fine" data-i18n="room_apartment_desc">Suite premium, tamaño ideal y silencio. Para 3 personas.</p>
+              <button class="btn btn-ghost btn-sm" data-modal-open="apartment" data-i18n="view_details">View Details →</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section-ivory" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">SERVICIOS</div>
+            <h2 class="section-title">Descubre nuestros servicios</h2>
+            <p class="body subtle">Detalles pensados para que la experiencia sea fluida, privada y memorable.</p>
+          </div>
+        </div>
+
+        <div class="services-grid" data-stagger="1">
+          <article class="service-card reveal reveal--up" style="--i:0">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 44s14-9.2 14-22a14 14 0 1 0-28 0c0 12.8 14 22 14 22Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M19 16h8a4 4 0 0 1 0 8h-8V16Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M19 24v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="svc_travel">Estacionamiento </h3>
+            <p class="service-text">Estacionamiento sin valet parking y no techado, en la propiedad (EUR 20 por noche)</p>
+          </article>
+
+          <article class="service-card reveal reveal--up" style="--i:1">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M21 16v16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M18 16v7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M24 16v7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M28 16v16c0 0 0-5 3-6v-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="svc_catering">Catering Service</h3>
+            <p class="service-text">Desayuno, brunch y servicio privado para reuniones discretas.</p>
+          </article>
+
+          <article class="service-card reveal reveal--up" style="--i:2">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M8 18c4.2-4.2 10-6.6 16-6.6s11.8 2.4 16 6.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M13 23c2.9-2.9 6.8-4.6 11-4.6s8.1 1.7 11 4.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M18 28c1.6-1.6 3.7-2.6 6-2.6s4.4 1 6 2.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="24" cy="34" r="1.8" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="svc_wifi">WiFi</h3>
+            <p class="service-text">Conexión de alta velocidad en toda la propiedad.</p>
+          </article>
+
+          <article class="service-card reveal reveal--up" style="--i:3">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M16 18h16l-2 20H18l-2-20Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M18 18v-3a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M14 18h20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="svc_laundry">Laundry</h3>
+            <p class="service-text">Lavandería premium y planchado con tiempos ágiles y cuidado total.</p>
+          </article>
+
+          <article class="service-card reveal reveal-up" style="--i:4">
+  <div class="service-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Almohadilla central -->
+  <ellipse cx="12" cy="16" rx="3.2" ry="2.5"/>
+  <!-- Dedo superior izquierdo -->
+  <ellipse cx="8.3" cy="11.8" rx="1.3" ry="1.7"/>
+  <!-- Dedo superior derecho -->
+  <ellipse cx="15.7" cy="11.8" rx="1.3" ry="1.7"/>
+  <!-- Dedo centro izquierdo -->
+  <ellipse cx="10.2" cy="10.2" rx="1.2" ry="1.6"/>
+  <!-- Dedo centro derecho -->
+  <ellipse cx="13.8" cy="10.2" rx="1.2" ry="1.6"/>
+</svg>
+</div>
+  <h3 class="service-title" data-i18n="svc_pets">Pet friendly</h3>
+  <p class="service-text">
+    Espacio pet-friendly diseñado para que viajes con tu compañero con total comodidad.
+  </p>
+</article>
+          <article class="service-card reveal reveal--up" style="--i:5">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M14 16h20l-10 10-10-10Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M24 26v14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M18 40h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="36.5" cy="14" r="3" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M33.8 15.2 30 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title" data-i18n="svc_bar">Bar & Drinks</h3>
+            <p class="service-text">Coctelería de autor y vinos seleccionados en un lounge íntimo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ivory" id="dining">
+      <div class="container">
+        <div class="feature">
+          <div class="feature-text">
+            <div class="kicker">Dining</div>
+            <h2 class="section-title">Gastronomía - Coming Soon</h2>
+            <p class="body">
+              Cocina contemporánea con técnica clásica. Carta corta, ingredientes impecables y un servicio que acompaña sin invadir.
+            </p>
+            <ul class="list">
+              <li>Restaurante principal + lounge</li>
+              <li>Bar con coctelería de temporada</li>
+              <li>Room service 24/7</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Reservar mesa</a>
+          </div>
+          <div class="feature-media media-hover">
+            <img src="https://elgourmetdeandalucia.com/wp-content/uploads/LASA%C3%91A-BOLO%C3%91ESA-ORIGINAL-1.jpg" alt="Restaurante de lujo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="spa">
+      <div class="container">
+        <div class="feature reverse">
+          <div class="feature-text">
+            <div class="kicker gold">Wellness</div>
+            <h2 class="section-title" style="color:var(--text)">Productos Regionales</h2>
+            <p class="body subtle-on-dark">
+              Productos Premium seleccionados de la región. Minimalismo, silencio y detalle.
+            </p>
+            <div class="pill-row">
+              <span class="pill pill-dark">Vinos</span>
+              <span class="pill pill-dark">Conservas</span>
+              <span class="pill pill-dark">Delicatessen</span>
+            </div>
+            <a class="link link-gold" href="#gallery">Ver productos <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="feature-media media-hover">
+            <img src="https://justitalia.es/wp-content/uploads/2021/04/clip_image001-1310x873.jpg" alt="Spa" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ivory" id="attractions">
+      <div class="container">
+        <div class="feature">
+          <div class="feature-text">
+            <div class="kicker">Aeropuertos y Atracciones</div>
+            <h2 class="section-title">Descubre la zona</h2>
+            <p class="body">
+              Estamos ubicados cerca de aeropuertos, estaciones de tren y atracciones clave, facilitando el acceso a lo mejor de la ciudad y sus alrededores.
+            </p>
+            <ul class="list">
+              <li>Piazza Vecchia - 5 min en auto</li>
+              <li>Piazza Pontida - 2 min a pie</li>
+              <li>Via XX Settembre - 3 min a pie</li>
+              <li>Estación de tren de Bérgamo - 14 min a pie</li>
+              <li>Bérgamo (BGY-Orio Al Serio) - 6 min en auto</li>
+              <li>Milán (LIN-Linate) - 40 min en auto</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Contacto</a>
+          </div>
+          <div class="feature-media media-hover">
+            <img src="./assets/Fotos HQ/ChatGPT Image 25 mar 2026, 19_50_49.webp" alt="Restaurante de lujo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Reviews / Testimonials -->
+    <section class="section section-ivory" id="reviews">
+      <div class="container">
+        <div class="section-head reviews-head">
+          <div>
+            <div class="kicker">TESTIMONIALS</div>
+            <h2 class="section-title">Nuestros huéspedes</h2>
+            <p class="body subtle">Reseñas seleccionadas para reflejar el estándar de servicio y el carácter de la experiencia.</p>
+          </div>
+        </div>
+
+        <div class="reviews-shell reveal reveal--fade">
+          <button class="review-nav review-prev" type="button" aria-label="Anterior">
+            <span aria-hidden="true">←</span>
+          </button>
+
+          <div class="reviews-viewport" aria-live="polite">
+            <div class="review-track" id="reviewTrack">
+              <article class="review-card" data-review>
+                <p class="review-text">
+                  “Una atención impecable. Desde el check-in hasta el último detalle del room service, todo fue
+                  discreto, cálido y perfectamente coordinado.”
+                </p>
+                <div class="review-meta">
+                  <div class="review-rating" aria-label="5 de 5 estrellas">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                  </div>
+                  <div class="review-name">— Valentina R.</div>
+                </div>
+                <div class="review-source" aria-label="Fuente de reseña">
+                  <span class="source-mark" aria-hidden="true"></span>
+                  <span class="source-text">Tripadvisor</span>
+                </div>
+              </article>
+
+              <article class="review-card" data-review>
+                <p class="review-text">
+                  “Las suites son silenciosas y con un nivel de terminación excelente. La ubicación es ideal y el
+                  concierge resolvió reservas y traslados en minutos.”
+                </p>
+                <div class="review-meta">
+                  <div class="review-rating" aria-label="5 de 5 estrellas">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                  </div>
+                  <div class="review-name">— Martín G.</div>
+                </div>
+                <div class="review-source" aria-label="Fuente de reseña">
+                  <span class="source-mark" aria-hidden="true"></span>
+                  <span class="source-text">Google Reviews</span>
+                </div>
+              </article>
+
+              <article class="review-card" data-review>
+                <p class="review-text">
+                  “El lounge y el bar son un sueño: ambiente íntimo, coctelería precisa y música al volumen justo.
+                  Volvería sin dudarlo.”
+                </p>
+                <div class="review-meta">
+                  <div class="review-rating" aria-label="4 de 5 estrellas">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star star--dim">★</span>
+                  </div>
+                  <div class="review-name">— Sofía L.</div>
+                </div>
+                <div class="review-source" aria-label="Fuente de reseña">
+                  <span class="source-mark" aria-hidden="true"></span>
+                  <span class="source-text">Booking</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button class="review-nav review-next" type="button" aria-label="Siguiente">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="reviews-dots" role="tablist" aria-label="Selector de reseñas">
+          <button class="dot is-active" type="button" aria-label="Reseña 1"></button>
+          <button class="dot" type="button" aria-label="Reseña 2"></button>
+          <button class="dot" type="button" aria-label="Reseña 3"></button>
+        </div>
+      </div>
+    </section>
+
+
+<section class="section section-ivory" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Galeria</div>
+            <h2 class="section-title">Una identidad visual coherente</h2>
+            <br>
+          </div>
+        </div>
+
+        <div class="masonry">
+          <img src="assets/Fotos HQ/11_Room/11_Room.webp" alt="Lobby" loading="lazy">
+          <img src="assets/Fotos HQ/10_Room/10_Room-7.webp" alt="Habitación" loading="lazy">
+          <img src="assets/Fotos HQ/07_Room/07_Room.webp" alt="Terraza" loading="lazy">
+          <img src="assets/Fotos HQ/06_Room/06_Room-3.webp" alt="Detalle premium" loading="lazy">
+          <img src="assets/Fotos HQ/05_Room/05_Room-9.webp" alt="Fachada" loading="lazy">
+          <img src="assets/Fotos HQ/01_Coworking/01_Coworking-3.webp" alt="Suite" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="section-title">Contacto</h2>
+          <p class="body">
+            Dirección, mapa, teléfonos y políticas.
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <div class="label">Dirección</div>
+              <div class="value">Via Gianbattista Moroni 77, Bergamo, BG, 24122</div>
+            </div>
+            <div class="contact-item">
+              <div class="label">Teléfono</div>
+              <div class="value">+39 342 941-9576</div>
+            </div>
+            <div class="contact-item">
+              <div class="label">Email</div>
+              <div class="value">info@camoronicollection.com
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-map" aria-label="Mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.001969976915!2d9.660011475658226!3d45.6909324710786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781510c133a1af7%3A0x5cde059df35016c6!2sVia%20Gianbattista%20Moroni%2C%2077%2C%2024122%20Bergamo%20BG%2C%20Italia!5e0!3m2!1ses-419!2sar!4v1772751292269!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="#top" data-i18n="back_to_top">Volver arriba</a>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer-inner">
+            <div class="fine">© <span id="year"></span> CA Moroni Collection</div>
+            <div class="fine">2026</div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Detalles de habitación">
+      <div class="modal-top">
+        <h3 id="modalTitle" data-i18n="modal_title">Detalles</h3>
+        <button class="icon-btn close-btn" id="closeModalBtn" aria-label="Cerrar">
+          <span class="x" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-content" id="modalContent"></div>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="modalBookBtn" data-i18n="modal_book">Book</button>
+        <button class="btn btn-ghost" id="modalCloseBtn" data-i18n="modal_close">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script>
+    // Helpers
+    const $ = (s, el=document) => el.querySelector(s);
+    const $$ = (s, el=document) => Array.from(el.querySelectorAll(s));
+
+    // Drawer
+    const drawer = $("#drawer");
+    const menuBtn = $("#menuBtn");
+    const closeDrawerBtn = $("#closeDrawerBtn");
+    const drawerOverlay = $("#drawerOverlay");
+
+    function openDrawer(){
+      drawer.classList.add("is-open");
+      drawer.setAttribute("aria-hidden", "false");
+      menuBtn.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    }
+    function closeDrawer(){
+      drawer.classList.remove("is-open");
+      drawer.setAttribute("aria-hidden", "true");
+      menuBtn.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    menuBtn?.addEventListener("click", () => {
+      drawer.classList.contains("is-open") ? closeDrawer() : openDrawer();
+    });
+    closeDrawerBtn?.addEventListener("click", closeDrawer);
+    drawerOverlay?.addEventListener("click", closeDrawer);
+    $$(".drawer-link").forEach(a => a.addEventListener("click", closeDrawer));
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape"){
+        if(drawer.classList.contains("is-open")) closeDrawer();
+        if(modal.classList.contains("is-open")) closeModal();
+      }
+    });
+
+    // Scroll down
+    $("#scrollDownBtn")?.addEventListener("click", () => {
+      $("#experience")?.scrollIntoView({behavior:"smooth", block:"start"});
+    });
+
+    // Booking interactions
+    const bookingCard = $("#bookingCard");
+    const OCTORATE_BOOKING_URL = "https://book.octorate.com/octobook/site/reservation/index.xhtml?siteKey=77b23b26cc9a0ad8b270bb51f7d04598";
+    function openOctorateBooking(event){
+      if(event) event.preventDefault();
+      window.open(OCTORATE_BOOKING_URL, "_blank", "noopener,noreferrer");
+    }
+    $("#openBookingBtn")?.addEventListener("click", openOctorateBooking);
+
+    const bookingForm = $("#bookingForm");
+    const bookingResult = $("#bookingResult");
+
+    function fmtDate(d){
+      try{
+        const x = new Date(d);
+        if(Number.isNaN(x.getTime())) return null;
+        return x.toLocaleDateString("es-AR", {year:"numeric", month:"short", day:"2-digit"});
+      }catch{return null}
+    }
+
+    bookingForm?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      openOctorateBooking();
+    });
+
+    // Rooms filter (ultra-smooth: FLIP + overlay exit clones)
+    const chips = $$(".chip");
+    const grid = $("#roomsGrid");
+    const cards = $$("#roomsGrid .room-card");
+
+    function getRects(list){
+      const rects = new Map();
+      list.forEach(el => rects.set(el, el.getBoundingClientRect()));
+      return rects;
+    }
+
+    function ensureOverlay(){
+      if(!grid) return null;
+      let ov = grid.querySelector(".rooms-overlay");
+      if(!ov){
+        ov = document.createElement("div");
+        ov.className = "rooms-overlay";
+        grid.appendChild(ov);
+      }
+      return ov;
+    }
+
+    function rectRelativeToGrid(rect){
+      const g = grid.getBoundingClientRect();
+      return { left: rect.left - g.left, top: rect.top - g.top, width: rect.width, height: rect.height };
+    }
+
+    function makeExitClone(card, overlay){
+      const r = rectRelativeToGrid(card.getBoundingClientRect());
+      const clone = card.cloneNode(true);
+      clone.classList.remove("reveal", "is-in", "is-entering"); // keep it static
+      clone.style.left = r.left + "px";
+      clone.style.top = r.top + "px";
+      clone.style.width = r.width + "px";
+      clone.style.height = r.height + "px";
+      overlay.appendChild(clone);
+
+      // Animate clone out (smooth)
+      clone.animate([
+        { opacity: 1, transform: "translateY(0) scale(1)" },
+        { opacity: 0, transform: "translateY(18px) scale(.99)" }
+      ], { duration: 520, easing: "cubic-bezier(.2,.9,.2,1)", fill: "forwards" })
+      .addEventListener("finish", () => clone.remove());
+    }
+
+    function applyFilterUltraSmooth(filter){
+      if(!grid) return;
+
+      const overlay = ensureOverlay();
+
+      // FIRST: measure current positions of visible cards
+      const visibleBefore = cards.filter(c => !c.classList.contains("is-hidden"));
+      const first = getRects(visibleBefore);
+
+      // Compute sets
+      const toHide = cards.filter(c => filter !== "all" && c.dataset.type !== filter && !c.classList.contains("is-hidden"));
+      const toShow = cards.filter(c => filter === "all" || c.dataset.type === filter);
+
+      // Create exit clones for the cards that will disappear (so exit animation doesn't affect layout)
+      toHide.forEach(c => makeExitClone(c, overlay));
+
+      // Apply final layout instantly (hide originals, show targets) to get LAST rects without choppy reflow
+      toHide.forEach(c => c.classList.add("is-hidden"));
+      toShow.forEach(c => c.classList.remove("is-hidden"));
+
+      // LAST: measure new positions of visible cards
+      const visibleAfter = cards.filter(c => !c.classList.contains("is-hidden"));
+      const last = getRects(visibleAfter);
+
+      // INVERT: set transforms so elements appear in old positions
+      grid.classList.add("is-flipping");
+      visibleAfter.forEach(el => {
+        const f = first.get(el);
+        const l = last.get(el);
+        if(!f || !l) return; // brand-new entering card
+        const dx = f.left - l.left;
+        const dy = f.top - l.top;
+        if (dx || dy) {
+          el.style.transform = `translate(${dx}px, ${dy}px)`;
+        }
+      });
+
+      // PLAY: remove transforms on next frame
+      requestAnimationFrame(() => {
+        visibleAfter.forEach(el => el.style.transform = "");
+      });
+
+      // Enter animation for cards that were previously hidden
+      const entering = visibleAfter.filter(el => !first.has(el));
+      entering.forEach((el, idx) => {
+        el.classList.add("is-entering");
+        el.classList.remove("is-in");
+        // stagger in
+        setTimeout(() => {
+          el.classList.add("is-in");
+          setTimeout(() => el.classList.remove("is-entering"), 520);
+        }, 80 + idx * 80);
+      });
+
+      // Cleanup
+      setTimeout(() => grid.classList.remove("is-flipping"), 680);
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener("click", () => {
+        chips.forEach(c => c.classList.remove("is-active"));
+        chip.classList.add("is-active");
+        applyFilterUltraSmooth(chip.dataset.filter);
+      });
+    });
+
+
+    // Modal
+    const modal = $("#modal");
+    const modalOverlay = $("#modalOverlay");
+    const closeModalBtn = $("#closeModalBtn");
+    const modalCloseBtn = $("#modalCloseBtn");
+    const modalTitle = $("#modalTitle");
+    const modalContent = $("#modalContent");
+
+    const roomDetails = {
+      king: {
+        title: "Deluxe Room",
+        img: "assets/Fotos HQ/01_Room/01_Room-4.webp",
+        gallery: [
+          "assets/Fotos HQ/01_Room/01_Room-4.webp",
+          "assets/Fotos HQ/04_Room/04_Room-11.webp",
+          "assets/Fotos HQ/05_Room/05_Room-9.webp",
+          "assets/Fotos HQ/06_Room/06_Room-3.webp"
+        ],
+        items: [
+          ["Tamaño", "32–36 m²"],
+          ["Cama", "King · linen premium"],
+          ["Baño", "Mármol + ducha lluvia"],
+          ["Vista", "Ciudad · luz natural"]
+        ],
+        note: "Ideal para estadías cortas con confort silencioso."
+      },
+      suite: {
+        title: "Deluxe Room - 3 people",
+        img: "assets/Fotos HQ/02_Room/02_Room-4.webp",
+        gallery: [
+          "assets/Fotos HQ/02_Room/02_Room-4.webp",
+          "assets/Fotos HQ/07_Room/07_Room.webp",
+          "assets/Fotos HQ/10_Room/10_Room-7.webp",
+          "assets/Fotos HQ/fotos webp/Room8/08_Room-8.webp"
+        ],
+        items: [
+          ["Tamaño", "52–68 m²"],
+          ["Ambientes", "Living privado + bar"],
+          ["Baño", "Spa-style · bañera"],
+          ["Servicio", "Concierge dedicado"]
+        ],
+        note: "Ritmo, amplitud y privacidad en cada detalle."
+      },
+      deluxe: {
+        title: "Deluxe Room - 6 people",
+        img: "assets/Fotos HQ/03_Room/03_Room-14.webp",
+        gallery: [
+          "assets/Fotos HQ/03_Room/03_Room-14.webp",
+          "assets/Fotos HQ/05_Room/05_Room-9.webp",
+          "assets/Fotos HQ/06_Room/06_Room-3.webp",
+          "assets/Fotos HQ/10_Room/10_Room-7.webp"
+        ],
+        items: [
+          ["Tamaño", "38–42 m²"],
+          ["Diseño", "Texturas premium"],
+          ["Baño", "Mármol · amenities"],
+          ["Ambiente", "Iluminación cálida"]
+        ],
+        note: "El balance perfecto entre diseño y calma."
+      },
+      apartment: {
+        title: "Suite Room",
+        img: "assets/Fotos HQ/fotos webp/Room11/11_Room (1).webp",
+        gallery: [
+          "assets/Fotos HQ/fotos webp/Room11/11_Room (1).webp"
+        ],
+        items: [
+          ["Tamaño", "45–55 m²"],
+          ["Ambiente", "Suite premium"],
+          ["Comodidad", "Silencio y amplitud"],
+          ["Ideal", "Para 3 personas"]
+        ],
+        note: "Una opción amplia y serena para una estadía más privada."
+      }
+    };
+
+    function openModal(key){
+      const d = roomDetails[key];
+      if(!d) return;
+      modalTitle.textContent = d.title;
+
+      const meta = d.items.map(([k,v]) => `
+        <div class="kv">
+          <div class="k">${k}</div>
+          <div class="v">${v}</div>
+        </div>
+      `).join("");
+
+      const gallery = (d.gallery && d.gallery.length ? d.gallery : [d.img]).map((src, idx) => `
+        <button class="modal-thumb ${idx === 0 ? 'is-active' : ''}" type="button" data-modal-thumb="${src}" aria-label="Ver imagen ${idx + 1} de ${d.title}">
+          <img src="${src}" alt="${d.title} ${idx + 1}">
+        </button>
+      `).join("");
+
+      modalContent.innerHTML = `
+        <div class="modal-media-stack">
+          <img src="${d.img}" alt="${d.title}" id="modalMainImage">
+          <div class="modal-gallery">${gallery}</div>
+        </div>
+        <div class="modal-meta">
+          ${meta}
+          <div class="kv">
+            <div class="k">Nota</div>
+            <div class="v">${d.note}</div>
+          </div>
+        </div>
+      `;
+
+      const mainImage = modalContent.querySelector("#modalMainImage");
+      modalContent.querySelectorAll("[data-modal-thumb]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const src = btn.dataset.modalThumb;
+          if(mainImage) mainImage.src = src;
+          modalContent.querySelectorAll(".modal-thumb").forEach(t => t.classList.remove("is-active"));
+          btn.classList.add("is-active");
+        });
+      });
+
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden","false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden","true");
+      document.body.style.overflow = "";
+    }
+
+    $$("[data-modal-open]").forEach(btn => {
+      btn.addEventListener("click", () => openModal(btn.dataset.modalOpen));
+    });
+    modalOverlay?.addEventListener("click", closeModal);
+    closeModalBtn?.addEventListener("click", closeModal);
+    modalCloseBtn?.addEventListener("click", closeModal);
+
+    $("#modalBookBtn")?.addEventListener("click", () => {
+      closeModal();
+      $("#rooms")?.scrollIntoView({behavior:"smooth", block:"start"});
+      $("#openBookingBtn")?.click();
+      showToast("Book your room");
+    });
+
+    // Toast
+    const toast = $("#toast");
+    let toastTimer = null;
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add("is-show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("is-show"), 2400);
+    }
+    $("#toastBtn")?.addEventListener("click", () => showToast("Acción simulada. Esto puede abrir WhatsApp, formulario o motor de reservas."));
+
+    // Footer year
+    $("#year").textContent = String(new Date().getFullYear());
+
+    // Close drawer on anchor clicks (general)
+    $$('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const href = a.getAttribute("href");
+        if(href && href.length > 1){
+          const target = $(href);
+          if(target){
+            e.preventDefault();
+            target.scrollIntoView({behavior:"smooth", block:"start"});
+            closeDrawer();
+          }
+        }
+      });
+    });
+  </script>
+
+<script>
+  // Robust image fallback: if any external image fails, replace with a stable placeholder.
+  (function () {
+    function fallbackFor(img) {
+      const w = img.naturalWidth || img.width || 1400;
+      const h = img.naturalHeight || img.height || 900;
+      const seed = encodeURIComponent((img.getAttribute("alt") || "luxury").slice(0, 40) + "-" + (img.getAttribute("src") || "").slice(-12));
+      img.src = `https://picsum.photos/seed/${seed}/${Math.max(600, w)}/${Math.max(400, h)}`;
+      img.removeAttribute("srcset");
+    }
+
+    document.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("error", function () {
+        // Prevent infinite loops
+        if (img.dataset.fallbackApplied) return;
+        img.dataset.fallbackApplied = "1";
+        fallbackFor(img);
+      }, { once: true });
+
+      // If image is lazy and already broken in cache, try forcing a reload once
+      if (img.complete && img.naturalWidth === 0) {
+        img.dispatchEvent(new Event("error"));
+      }
+    });
+  })();
+</script>
+
+
+<script>
+  // Scroll reveal animations (IntersectionObserver)
+  (function () {
+    const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
+
+    // Mark elements to reveal
+    const selectors = [
+      ".hero-copy", ".booking-card",
+      "#experience .panel-text", "#experience .panel-media",
+      "#rooms .section-head", "#roomsGrid .room-card",
+      "#services .section-head", "#services .service-card",
+
+      "#dining .feature-text", "#dining .feature-media",
+      "#spa .feature-text", "#spa .feature-media",
+            "#reviews .section-head", "#reviews .reviews-shell", "#reviews .review-card",
+      "#gallery .section-head", "#gallery .masonry img",
+      "#contact .contact-card", ".footer-inner"
+    ];
+
+    const elements = selectors.flatMap(sel => Array.from(document.querySelectorAll(sel)));
+
+    elements.forEach((el) => {
+      // Choose a variant by context
+      if (el.classList.contains("room-card")) el.classList.add("reveal", "reveal--up");
+      else if (el.closest(".panel-media") || el.closest(".feature-media")) el.classList.add("reveal", "reveal--zoom");
+      else if (el.closest(".panel-text") || el.closest(".feature-text")) el.classList.add("reveal", "reveal--left");
+      else if (el.matches(".masonry img")) el.classList.add("reveal", "reveal--up");
+      else el.classList.add("reveal", "reveal--fade");
+    });
+
+    // Stagger for rooms + gallery
+    const roomsGrid = document.getElementById("roomsGrid");
+    if (roomsGrid) {
+      roomsGrid.setAttribute("data-stagger", "1");
+      Array.from(roomsGrid.querySelectorAll(".room-card")).forEach((card, idx) => {
+        card.style.setProperty("--i", idx);
+      });
+    }
+    const masonry = document.querySelector(".masonry");
+    if (masonry) {
+      masonry.setAttribute("data-stagger", "1");
+      Array.from(masonry.querySelectorAll("img")).forEach((img, idx) => {
+        img.style.setProperty("--i", idx % 9);
+      });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -10% 0px" });
+
+    elements.forEach(el => io.observe(el));
+  })();
+</script>
+
+
+<script>
+  // Logo swap (white on dark hero, gold on light sections) + micro entrance
+  (function(){
+    const header = document.querySelector(".site-header");
+    const logo = document.getElementById("brandLogo");
+    if(!header || !logo) return;
+
+    // Micro entrance
+    requestAnimationFrame(() => {
+      header.classList.add("is-ready");
+      logo.classList.add("is-ready");
+    });
+
+    const srcWhite = logo.dataset.logoWhite;
+    const srcGold  = logo.dataset.logoGold;
+
+    // Preload gold to avoid flicker
+    const preload = new Image();
+    preload.src = srcGold;
+
+    function setLogo(mode){
+      const next = (mode === "gold") ? srcGold : srcWhite;
+      if(logo.getAttribute("src") === next) return;
+      // Fade swap
+      logo.classList.add("is-swapping");
+      setTimeout(() => {
+        logo.setAttribute("src", next);
+        logo.classList.remove("is-swapping");
+      }, 150);
+    }
+
+    // Determine "light" when a light-background section is near top
+    const lightSentinels = ["#experience", "#rooms", "#dining", "#gallery"].map(s => document.querySelector(s)).filter(Boolean);
+
+    const io = new IntersectionObserver((entries) => {
+      // If any light section occupies the top band, switch to gold
+      const anyLight = entries.some(e => e.isIntersecting && e.boundingClientRect.top < (window.innerHeight * 0.35));
+      if(anyLight){
+        header.classList.add("on-light");
+        setLogo("gold");
+      } else {
+        header.classList.remove("on-light");
+        setLogo("white");
+      }
+    }, { threshold: [0.05, 0.15, 0.3], rootMargin: "-10% 0px -75% 0px" });
+
+    lightSentinels.forEach(el => io.observe(el));
+
+    // Fallback: if near top of page, keep white
+    window.addEventListener("scroll", () => {
+      if(window.scrollY < 40){
+        header.classList.remove("on-light");
+        setLogo("white");
+      }
+    }, { passive:true });
+  })();
+</script>
+
+
+<script>
+  // Reviews slider
+  (function(){
+    const track = document.getElementById("reviewTrack");
+    if(!track) return;
+    const cards = Array.from(track.querySelectorAll("[data-review]"));
+    const prev = document.querySelector(".review-prev");
+    const next = document.querySelector(".review-next");
+    const dots = Array.from(document.querySelectorAll(".reviews-dots .dot"));
+    let index = 0;
+
+    function go(i){
+      index = (i + cards.length) % cards.length;
+      track.style.transform = `translateX(${-index * 100}%)`;
+      dots.forEach((d, di) => d.classList.toggle("is-active", di === index));
+    }
+
+    prev && prev.addEventListener("click", () => go(index - 1));
+    next && next.addEventListener("click", () => go(index + 1));
+  })();
+</script>
+
+<script>
+  // i18n (ES / EN / IT)
+  (function(){
+    const dict = {"es": {"hero_title": "CA Moroni Collection", "hero_lead": "Comodidad, lujo y ubicación en el corazón de la ciudad de Bérgamo", "hero_cta_primary": "Explorar", "hero_cta_secondary": "SUITES", "rooms_title": "Una experiencia auténtica", "rooms_subtitle": "Hospedaje con carácter", "services_title": "Descubrí nuestros servicios", "services_subtitle": "Detalles pensados para que la experiencia sea fluida, privada y memorable.", "svc_travel": "Estacionamiento", "svc_catering": "Servicio de catering", "svc_wifi": "WiFi", "svc_laundry": "Lavandería", "svc_pets": "Mascotas", "svc_bar": "Bar & Drink", "reviews_title": "Qué dicen nuestros huéspedes", "reviews_subtitle": "Reseñas seleccionadas para reflejar el estándar de servicio y el carácter de la experiencia.", "gallery_title": "Galería", "contact_title": "Contacto", "contact_subtitle": "Escribinos y te respondemos en el día.", "contact_address": "Dirección", "contact_phone": "Teléfono", "contact_email": "Email", "back_to_top": "Volver arriba", "simulate_action": "Simular acción", "booking_title": "Reservá tu estadía", "booking_checkin": "Check-in", "booking_checkout": "Check-out", "booking_guests": "Huéspedes", "booking_rooms": "Habitaciones", "booking_cta": "Ver disponibilidad", "nav_book": "BOOK", "drawer_title": "Navegación", "nav_experience": "Experiencia", "nav_rooms": "Habitaciones", "nav_dining": "Gastronomía", "nav_spa": "Wellness", "nav_gallery": "Galería", "nav_contact": "Contacto", "modal_title": "Detalles", "modal_book": "BOOK", "modal_close": "Cerrar", "chip_all": "Todos", "chip_rooms": "Habitaciones", "chip_suites": "Suites", "per_night": " / noche", "view_details": "Ver detalles →", "room_king_title": "Deluxe Room", "room_suite_title": "Deluxe Room - 3 people", "room_deluxe_title": "Deluxe Room - 6 people", "room_family_title": "Family Suite", "room_apartment_title": "Suite Room", "room_king_desc": "Minimalismo cálido, vista urbana y detalles de mármol. Para 2 personas.", "room_suite_desc": "Espacio privado, bar discreto y baño premium. Para 3 personas.", "room_deluxe_desc": "Texturas premium, iluminación suave y calma. Para 6 personas.", "room_family_desc": "Diseñada para compartir: dos ambientes y confort total.", "room_apartment_desc": "Suite premium, tamaño ideal y silencio. Para 3 personas.", "booking_error_dates": "Completá fechas válidas para simular disponibilidad.", "booking_error_order": "Check-out debe ser posterior al check-in.", "booking_result_prefix": "Disponibilidad simulada:", "toast_simulated": "Listo. Simulamos disponibilidad (sin back-end)."}, "en": {"hero_title": "CA Moroni Collection", "hero_lead": "Comfort, luxury, and a prime location in the heart of Bergamo.", "hero_cta_primary": "Explore", "hero_cta_secondary": "SUITES", "rooms_title": "An authentic experience", "rooms_subtitle": "Accommodation with character", "services_title": "Discover our services", "services_subtitle": "Thoughtful details designed for a seamless, private, memorable stay.", "svc_travel": "Parking", "svc_catering": "Catering service", "svc_wifi": "WiFi", "svc_laundry": "Laundry", "svc_pets": "Pets", "svc_bar": "Bar & Drinks", "reviews_title": "What guests say", "reviews_subtitle": "Selected reviews reflecting our service standard and the character of the experience.", "gallery_title": "Gallery", "contact_title": "Contact", "contact_subtitle": "Write to us and we will reply today.", "contact_address": "Address", "contact_phone": "Phone", "contact_email": "Email", "back_to_top": "Back to top", "simulate_action": "Simulate action", "booking_title": "Book your stay", "booking_checkin": "Check-in", "booking_checkout": "Check-out", "booking_guests": "Guests", "booking_rooms": "Rooms", "booking_cta": "Check availability", "nav_book": "BOOK", "drawer_title": "Navigation", "nav_experience": "Experience", "nav_rooms": "Rooms", "nav_dining": "Dining", "nav_spa": "Wellness", "nav_gallery": "Gallery", "nav_contact": "Contact", "modal_title": "Details", "modal_book": "BOOK", "modal_close": "Close", "chip_all": "All", "chip_rooms": "Rooms", "chip_suites": "Suites", "per_night": " / night", "view_details": "View details →", "room_king_title": "Deluxe Room", "room_suite_title": "Deluxe Room - 3 people", "room_deluxe_title": "Deluxe Room - 6 people", "room_family_title": "Family Suite", "room_apartment_title": "Suite Room", "room_king_desc": "Warm minimalism, urban views, and marble details. For 2 guests.", "room_suite_desc": "Private space, discreet bar, and premium bathroom. For 3 guests.", "room_deluxe_desc": "Premium textures, soft lighting, and calm. For 6 guests.", "room_family_desc": "Made for sharing: two zones and total comfort.", "room_apartment_desc": "Premium suite, ideal size, and quiet. For 3 guests.", "booking_error_dates": "Please enter valid dates to simulate availability.", "booking_error_order": "Check-out must be after check-in.", "booking_result_prefix": "Simulated availability:", "toast_simulated": "Done. Availability simulated (no back-end)."}, "it": {"hero_title": "CA Moroni Collection", "hero_lead": "Comfort, lusso e posizione nel cuore della città di Bergamo.", "hero_cta_primary": "Esplora", "hero_cta_secondary": "SUITES", "rooms_title": "Un’esperienza autentica", "rooms_subtitle": "Ospitalità con carattere", "services_title": "Scopri i nostri servizi", "services_subtitle": "Dettagli pensati per un soggiorno fluido, riservato e memorabile.", "svc_travel": "Parcheggio", "svc_catering": "Servizio catering", "svc_wifi": "WiFi", "svc_laundry": "Lavanderia", "svc_pets": "Animali", "svc_bar": "Bar & Drink", "reviews_title": "Cosa dicono gli ospiti", "reviews_subtitle": "Recensioni selezionate per riflettere lo standard del servizio e il carattere dell’esperienza.", "gallery_title": "Galleria", "contact_title": "Contatti", "contact_subtitle": "Scrivici: rispondiamo in giornata.", "contact_address": "Indirizzo", "contact_phone": "Telefono", "contact_email": "Email", "back_to_top": "Torna su", "simulate_action": "Simula azione", "booking_title": "Prenota il tuo soggiorno", "booking_checkin": "Check-in", "booking_checkout": "Check-out", "booking_guests": "Ospiti", "booking_rooms": "Camere", "booking_cta": "Verifica disponibilità", "nav_book": "PRENOTA", "drawer_title": "Navigazione", "nav_experience": "Esperienza", "nav_rooms": "Suites", "nav_dining": "Gastronomia", "nav_spa": "Wellness", "nav_gallery": "Galleria", "nav_contact": "Contatti", "modal_title": "Dettagli", "modal_book": "PRENOTA", "modal_close": "Chiudi", "chip_all": "Tutti", "chip_rooms": "Camere", "chip_suites": "Suite", "per_night": " / notte", "view_details": "Vedi dettagli →", "room_king_title": "Deluxe Room", "room_suite_title": "Deluxe Room - 3 people", "room_deluxe_title": "Deluxe Room - 6 people", "room_family_title": "Suite Familiare", "room_king_desc": "Minimalismo caldo, vista urbana e dettagli in marmo. Per 2 ospiti.", "room_suite_desc": "Spazio privato, bar discreto e bagno premium. Per 3 ospiti.", "room_deluxe_desc": "Texture premium, illuminazione morbida e quiete. Per 6 ospiti.", "room_family_desc": "Pensata per condividere: due ambienti e massimo comfort.", "room_apartment_desc": "Suite premium, dimensione ideale e silenzio. Per 3 ospiti.", "booking_error_dates": "Inserisci date valide per simulare la disponibilità.", "booking_error_order": "Il check-out deve essere successivo al check-in.", "booking_result_prefix": "Disponibilità simulata:", "toast_simulated": "Fatto. Disponibilità simulata (senza back-end)."}};
+    const buttons = Array.from(document.querySelectorAll(".lang-btn"));
+    const nodes = Array.from(document.querySelectorAll("[data-i18n]"));
+
+    function apply(lang) {
+      const table = dict[lang] || dict.es;
+      document.documentElement.setAttribute("lang", lang);
+      nodes.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(!key) return;
+        const val = table[key];
+        if(typeof val !== "string") return;
+        el.textContent = val;
+      });
+      buttons.forEach(b => b.classList.toggle("is-active", b.dataset.lang === lang));
+      try { localStorage.setItem("cm_lang", lang); } catch(e){}
+    }
+
+    function getInitial() {
+      try {
+        const saved = localStorage.getItem("cm_lang");
+        if(saved && dict[saved]) return saved;
+      } catch(e){}
+      const nav = (navigator.language || "es").toLowerCase();
+      if(nav.startsWith("it")) return "it";
+      if(nav.startsWith("en")) return "en";
+      return "es";
+    }
+
+    buttons.forEach(b => b.addEventListener("click", () => apply(b.dataset.lang)));
+    apply(getInitial());
+  })();
+</script>
+
+<script>
+  // Complete site i18n patch (ES / EN / IT) without altering original interactions
+  (function(){
+    const L = {
+      es: {
+        html_title: 'Ca Moroni Collection - Timeless Italian Hospitality',
+        skip_link: 'Saltar al contenido',
+        menu_aria: 'Abrir menú', close_menu_aria: 'Cerrar menú', home_aria: 'Inicio',
+        drawer_panel_aria: 'Menú principal',
+        lang_switch_aria: 'Selector de idioma',
+        hero_kicker: 'Timeless Italian Hospitality',
+        hero_title: 'CA Moroni Collection',
+        hero_lead: 'Comodidad, lujo y ubicación en el corazón de la ciudad de Bérgamo',
+        hero_cta_primary: 'Habitaciones', hero_cta_secondary: 'SUITES', hero_cta_tertiary: 'Ver experiencia',
+        scroll_down_aria: 'Bajar a la siguiente sección',
+        booking_panel_aria: 'Booking', booking_title: 'Booking Your Hotel', booking_checkin: 'Check In', booking_checkout: 'Check Out',
+        booking_guests: 'Guests', booking_rooms: 'Rooms', booking_cta: 'Check Availability',
+        guest_opts: ['1 Adult','2 Adults','3 Adults','4 Adults'], room_opts: ['1 Room','2 Rooms','3 Rooms'],
+        experience_title: 'Una experiencia<br>auténtica',
+        experience_body_1: 'En una ciudad vibrante y llena de estímulos, el verdadero lujo ha cambiado de definición. Ya no se trata solo de servicios opulentos, sino de algo mucho más valioso: el espacio, la privacidad y el tiempo. Poseer un apartamento privado, aunque sea temporalmente, es adueñarse de un santuario personal en medio del epicentro urbano.',
+        experience_body_2: 'Una experiencia auténtica que le permite vivir la ciudad como un residente, no solo como un visitante. Le da la base para crear una rutina propia, disfrutando del silencio en un entorno elegante y privado.',
+        experience_link: 'Descubrir la galería <span aria-hidden="true">→</span>',
+        experience_img_alt_1: 'Fachada de hotel de lujo', experience_img_alt_2: 'Suite con detalles premium',
+        inside_title: 'Un paso dentro',
+        inside_body: 'Nuestra propiedad ha sido diseñada para ofrecer una flexibilidad y un confort incomparables, adaptándose perfectamente a sus necesidades de viaje.',
+        inside_pills: ['Concierge 24/7','Wellness','Gastronomía'], inside_cta: 'Ver Departamentos',
+        rooms_kicker: 'Condominio de lujo', rooms_title: 'Hospedaje con carácter', chip_all: 'Todos', chip_room: 'Rooms', chip_suite: 'Suites', per_night: ' / night', view_details: 'View Details →',
+        room_king_title: 'Deluxe Room', room_king_desc: 'Minimalismo cálido, vista urbana y detalles de mármol. Para 2 personas.',
+        room_suite_title: 'Deluxe Room - 3 people', room_suite_desc: 'Espacio privado, bar discreto y baño premium. Para 3 personas.',
+        room_deluxe_title: 'Deluxe Room - 6 people', room_deluxe_desc: 'Texturas premium, iluminación suave y calma. Para 6 personas.', room_apartment_title: 'Suite Room', room_apartment_desc: 'Suite premium, tamaño ideal y silencio. Para 3 personas.',
+        services_kicker: 'SERVICIOS', services_title: 'Descubre nuestros servicios', services_subtitle: 'Detalles pensados para que la experiencia sea fluida, privada y memorable.',
+        services: [
+          ['Estacionamiento','Estacionamiento sin valet parking y no techado, en la propiedad (EUR 20 por noche)'],
+          ['Catering Service','Desayuno, brunch y servicio privado para reuniones discretas.'],
+          ['WiFi','Conexión de alta velocidad en toda la propiedad.'],
+          ['Laundry','Lavandería premium y planchado con tiempos ágiles y cuidado total.'],
+          ['Pet friendly','Espacio pet-friendly diseñado para que viajes con tu compañero con total comodidad.'],
+          ['Bar & Drinks','Coctelería de autor y vinos seleccionados en un lounge íntimo.']
+        ],
+        dining_kicker: 'Dining', dining_title: 'Gastronomía - Coming Soon', dining_body: 'Cocina contemporánea con técnica clásica. Carta corta, ingredientes impecables y un servicio que acompaña sin invadir.', dining_list: ['Restaurante principal + lounge','Bar con coctelería de temporada','Room service 24/7'], dining_cta: 'Reservar mesa', dining_alt: 'Restaurante de lujo',
+        wellness_kicker: 'Wellness', wellness_title: 'Productos Regionales', wellness_body: 'Productos Premium seleccionados de la región. Minimalismo, silencio y detalle.', wellness_pills: ['Vinos','Conservas','Delicatessen'], wellness_cta: 'Ver productos', wellness_alt: 'Spa',
+        attractions_kicker: 'Aeropuertos y Atracciones', attractions_title: 'Descubre la zona', attractions_body: 'Estamos ubicados cerca de aeropuertos, estaciones de tren y atracciones clave, facilitando el acceso a lo mejor de la ciudad y sus alrededores.', attractions_list: ['Piazza Vecchia - 5 min en auto','Piazza Pontida - 2 min a pie','Via XX Settembre - 3 min a pie','Estación de tren de Bérgamo - 14 min a pie','Bérgamo (BGY-Orio Al Serio) - 6 min en auto','Milán (LIN-Linate) - 40 min en auto'], attractions_cta: 'Contacto', attractions_alt: 'Atracciones cercanas',
+        reviews_kicker: 'TESTIMONIALS', reviews_title: 'Nuestros huéspedes', reviews_subtitle: 'Reseñas seleccionadas para reflejar el estándar de servicio y el carácter de la experiencia.', review_prev: 'Anterior', review_next: 'Siguiente', review_selector: 'Selector de reseñas', review_dots: ['Reseña 1','Reseña 2','Reseña 3'], review_source_aria: 'Fuente de reseña', review_ratings: ['5 de 5 estrellas','5 de 5 estrellas','4 de 5 estrellas'],
+        reviews: [
+          ['“Una atención impecable. Desde el check-in hasta el último detalle del room service, todo fue discreto, cálido y perfectamente coordinado.”','Tripadvisor'],
+          ['“Las suites son silenciosas y con un nivel de terminación excelente. La ubicación es ideal y el concierge resolvió reservas y traslados en minutos.”','Google Reviews'],
+          ['“El lounge y el bar son un sueño: ambiente íntimo, coctelería precisa y música al volumen justo. Volvería sin dudarlo.”','Booking']
+        ],
+        gallery_kicker: 'Galeria', gallery_title: 'Una identidad visual coherente', gallery_alts: ['Lobby','Habitación','Terraza','Detalle premium','Fachada','Suite'],
+        contact_title: 'Contacto', contact_body: 'Dirección, mapa, teléfonos y políticas.', contact_labels: ['Dirección','Teléfono','Email'], map_aria: 'Mapa', back_to_top: 'Volver arriba',
+        modal_title: 'Detalles', modal_book: 'Book', modal_close: 'Cerrar', modal_aria: 'Detalles de habitación', modal_close_aria: 'Cerrar', modal_book_toast: 'Book your room',
+        modal_note_label: 'Nota', modal_thumb_aria: 'Ver imagen {n} de {title}',
+        booking_error_dates: 'Completá fechas válidas para simular disponibilidad.', booking_error_order: 'Check Out debe ser posterior a Check In.', booking_result_prefix: 'Disponibilidad simulada:', toast_simulated: 'Listo. Simulamos disponibilidad (sin back-end).', simulated_action_toast: 'Acción simulada. Esto puede abrir WhatsApp, formulario o motor de reservas.'
+      },
+      en: {
+        html_title: 'Ca Moroni Collection - Timeless Italian Hospitality',
+        skip_link: 'Skip to content',
+        menu_aria: 'Open menu', close_menu_aria: 'Close menu', home_aria: 'Home', drawer_panel_aria: 'Main menu', lang_switch_aria: 'Language selector',
+        hero_kicker: 'Timeless Italian Hospitality', hero_title: 'CA Moroni Collection', hero_lead: 'Comfort, luxury, and location in the heart of Bergamo.', hero_cta_primary: 'Rooms', hero_cta_secondary: 'SUITES', hero_cta_tertiary: 'View experience', scroll_down_aria: 'Scroll to the next section',
+        booking_panel_aria: 'Booking', booking_title: 'Book Your Stay', booking_checkin: 'Check-in', booking_checkout: 'Check-out', booking_guests: 'Guests', booking_rooms: 'Rooms', booking_cta: 'Check Availability', guest_opts: ['1 Adult','2 Adults','3 Adults','4 Adults'], room_opts: ['1 Room','2 Rooms','3 Rooms'],
+        experience_title: 'An authentic<br>experience', experience_body_1: 'In a vibrant city full of stimuli, true luxury has changed its meaning. It is no longer only about opulent services, but about something far more valuable: space, privacy, and time. Having a private apartment, even temporarily, means owning a personal sanctuary in the middle of the urban epicenter.', experience_body_2: 'An authentic experience that lets you live the city like a resident, not just a visitor. It gives you the foundation to build your own rhythm, enjoying silence in an elegant and private setting.', experience_link: 'Discover the gallery <span aria-hidden="true">→</span>', experience_img_alt_1: 'Luxury hotel facade', experience_img_alt_2: 'Suite with premium details',
+        inside_title: 'A step inside', inside_body: 'Our property has been designed to offer remarkable flexibility and comfort, adapting perfectly to your travel needs.', inside_pills: ['Concierge 24/7','Wellness','Dining'], inside_cta: 'View Apartments',
+        rooms_kicker: 'Luxury condominium', rooms_title: 'Accommodation with character', chip_all: 'All', chip_room: 'Rooms', chip_suite: 'Suites', per_night: ' / night', view_details: 'View Details →', room_king_title: 'Deluxe Room', room_king_desc: 'Warm minimalism, urban views, and marble details. For 2 guests.', room_suite_title: 'Deluxe Room - 3 people', room_suite_desc: 'Private space, discreet bar, and premium bathroom. For 3 guests.', room_deluxe_title: 'Deluxe Room - 6 people', room_deluxe_desc: 'Premium textures, soft lighting, and calm. For 6 guests.', room_apartment_title: 'Suite Room', room_apartment_desc: 'Premium suite, ideal size, and quiet. For 3 guests.',
+        services_kicker: 'SERVICES', services_title: 'Discover our services', services_subtitle: 'Thoughtful details designed for a seamless, private, and memorable stay.', services: [['Parking','Uncovered self-parking on the property (EUR 20 per night)'],['Catering Service','Breakfast, brunch, and private service for discreet meetings.'],['WiFi','High-speed connection throughout the property.'],['Laundry','Premium laundry and ironing with fast turnaround and total care.'],['Pet friendly','A pet-friendly space designed so you can travel with your companion in total comfort.'],['Bar & Drinks','Signature cocktails and selected wines in an intimate lounge.']],
+        dining_kicker: 'Dining', dining_title: 'Dining - Coming Soon', dining_body: 'Contemporary cuisine with classical technique. A focused menu, impeccable ingredients, and service that accompanies without intruding.', dining_list: ['Main restaurant + lounge','Bar with seasonal cocktails','24/7 room service'], dining_cta: 'Book a table', dining_alt: 'Luxury restaurant',
+        wellness_kicker: 'Wellness', wellness_title: 'Regional Products', wellness_body: 'Premium regional products carefully selected. Minimalism, silence, and detail.', wellness_pills: ['Wines','Preserves','Delicatessen'], wellness_cta: 'View products', wellness_alt: 'Wellness products',
+        attractions_kicker: 'Airports & Attractions', attractions_title: 'Discover the area', attractions_body: 'We are located near airports, train stations, and key attractions, making it easy to access the best of the city and its surroundings.', attractions_list: ['Piazza Vecchia - 5 min by car','Piazza Pontida - 2 min walk','Via XX Settembre - 3 min walk','Bergamo train station - 14 min on foot','Bergamo (BGY-Orio Al Serio) - 6 min by car','Milan (LIN-Linate) - 40 min by car'], attractions_cta: 'Contact', attractions_alt: 'Nearby attractions',
+        reviews_kicker: 'TESTIMONIALS', reviews_title: 'Our guests', reviews_subtitle: 'Selected reviews that reflect the service standard and character of the experience.', review_prev: 'Previous', review_next: 'Next', review_selector: 'Review selector', review_dots: ['Review 1','Review 2','Review 3'], review_source_aria: 'Review source', review_ratings: ['5 out of 5 stars','5 out of 5 stars','4 out of 5 stars'], reviews: [['“Impeccable service. From check-in to the smallest room-service detail, everything felt discreet, warm, and perfectly coordinated.”','Tripadvisor'],['“The suites are quiet and finished to a very high standard. The location is ideal, and the concierge arranged bookings and transfers within minutes.”','Google Reviews'],['“The lounge and bar are a dream: intimate atmosphere, precise cocktails, and music at just the right volume. I would absolutely come back.”','Booking']],
+        gallery_kicker: 'Gallery', gallery_title: 'A coherent visual identity', gallery_alts: ['Lobby','Room','Terrace','Premium detail','Facade','Suite'],
+        contact_title: 'Contact', contact_body: 'Address, map, phone numbers, and policies.', contact_labels: ['Address','Phone','Email'], map_aria: 'Map', back_to_top: 'Back to top',
+        modal_title: 'Details', modal_book: 'Book', modal_close: 'Close', modal_aria: 'Room details', modal_close_aria: 'Close', modal_book_toast: 'Book your room', modal_note_label: 'Note', modal_thumb_aria: 'View image {n} of {title}', booking_error_dates: 'Enter valid dates to simulate availability.', booking_error_order: 'Check-out must be after Check-in.', booking_result_prefix: 'Simulated availability:', toast_simulated: 'Done. Availability simulated (no back-end).', simulated_action_toast: 'Simulated action. This could open WhatsApp, a form, or a booking engine.'
+      },
+      it: {
+        html_title: 'Ca Moroni Collection - Timeless Italian Hospitality',
+        skip_link: 'Salta al contenuto', menu_aria: 'Apri menu', close_menu_aria: 'Chiudi menu', home_aria: 'Home', drawer_panel_aria: 'Menu principale', lang_switch_aria: 'Selettore lingua',
+        hero_kicker: 'Timeless Italian Hospitality', hero_title: 'CA Moroni Collection', hero_lead: 'Comfort, lusso e posizione nel cuore di Bergamo.', hero_cta_primary: 'Camere', hero_cta_secondary: 'SUITES', hero_cta_tertiary: 'Scopri l’esperienza', scroll_down_aria: 'Scorri alla sezione successiva',
+        booking_panel_aria: 'Prenotazione', booking_title: 'Prenota il tuo soggiorno', booking_checkin: 'Check-in', booking_checkout: 'Check-out', booking_guests: 'Ospiti', booking_rooms: 'Camere', booking_cta: 'Verifica disponibilità', guest_opts: ['1 Adulto','2 Adulti','3 Adulti','4 Adulti'], room_opts: ['1 Camera','2 Camere','3 Camere'],
+        experience_title: 'Un´ esperienza<br>autentica', experience_body_1: 'In una città vibrante e piena di stimoli, il vero lusso ha cambiato definizione. Non si tratta più solo di servizi opulenti, ma di qualcosa di molto più prezioso: spazio, privacy e tempo. Avere un appartamento privato, anche solo temporaneamente, significa possedere un rifugio personale nel cuore della città.', experience_body_2: 'Un’esperienza autentica che ti permette di vivere la città come un residente, non solo come un visitatore. Ti offre la base per creare il tuo ritmo, godendo del silenzio in un ambiente elegante e riservato.', experience_link: 'Scopri la galleria <span aria-hidden="true">→</span>', experience_img_alt_1: 'Facciata di hotel di lusso', experience_img_alt_2: 'Suite con dettagli premium',
+        inside_title: 'Un passo dentro', inside_body: 'La nostra struttura è stata progettata per offrire flessibilità e comfort straordinari, adattandosi perfettamente alle tue esigenze di viaggio.', inside_pills: ['Concierge 24/7','Wellness','Gastronomia'], inside_cta: 'Vedi appartamenti',
+        rooms_kicker: 'Condominio di lusso', rooms_title: 'Ospitalità con carattere', chip_all: 'Tutti', chip_room: 'Camere', chip_suite: 'Suite', per_night: ' / notte', view_details: 'Vedi dettagli →', room_king_title: 'Deluxe Room', room_king_desc: 'Minimalismo caldo, vista urbana e dettagli in marmo. Per 2 ospiti.', room_suite_title: 'Deluxe Room - 3 people', room_suite_desc: 'Spazio privato, bar discreto e bagno premium. Per 3 ospiti.', room_deluxe_title: 'Deluxe Room - 6 people', room_deluxe_desc: 'Texture premium, illuminazione morbida e quiete. Per 6 ospiti.', room_apartment_title: 'Suite Room', room_apartment_desc: 'Suite premium, dimensione ideale e silenzio. Per 3 ospiti.',
+        services_kicker: 'SERVIZI', services_title: 'Scopri i nostri servizi', services_subtitle: 'Dettagli pensati per un soggiorno fluido, riservato e memorabile.', services: [['Parcheggio','Parcheggio scoperto in struttura senza valet (EUR 20 a notte)'],['Servizio catering','Colazione, brunch e servizio privato per riunioni discrete.'],['WiFi','Connessione ad alta velocità in tutta la struttura.'],['Lavanderia','Servizio lavanderia e stireria premium, rapido e curato.'],['Pet friendly','Spazio pet-friendly pensato per viaggiare con il tuo compagno in totale comodità.'],['Bar & Drinks','Cocktail signature e vini selezionati in un lounge intimo.']],
+        dining_kicker: 'Dining', dining_title: 'Gastronomia - Coming Soon', dining_body: 'Cucina contemporanea con tecnica classica. Carta essenziale, ingredienti impeccabili e un servizio che accompagna senza invadere.', dining_list: ['Ristorante principale + lounge','Bar con cocktail stagionali','Room service 24/7'], dining_cta: 'Prenota un tavolo', dining_alt: 'Ristorante di lusso',
+        wellness_kicker: 'Wellness', wellness_title: 'Prodotti regionali', wellness_body: 'Prodotti premium selezionati dalla regione. Minimalismo, silenzio e cura del dettaglio.', wellness_pills: ['Vini','Conserve','Delicatessen'], wellness_cta: 'Vedi prodotti', wellness_alt: 'Prodotti regionali',
+        attractions_kicker: 'Aeroporti e attrazioni', attractions_title: 'Scopri la zona', attractions_body: 'Siamo vicini ad aeroporti, stazioni ferroviarie e attrazioni chiave, per raggiungere facilmente il meglio della città e dei dintorni.', attractions_list: ['Piazza Vecchia - 5 min in auto','Piazza Pontida - 2 min a piedi','Via XX Settembre - 3 min a piedi','Stazione ferroviaria di Bergamo - 14 min a piedi','Bergamo (BGY-Orio Al Serio) - 6 min in auto','Milano (LIN-Linate) - 40 min in auto'], attractions_cta: 'Contatti', attractions_alt: 'Attrazioni vicine',
+        reviews_kicker: 'TESTIMONIALS', reviews_title: 'I nostri ospiti', reviews_subtitle: 'Recensioni selezionate per riflettere lo standard del servizio e il carattere dell’esperienza.', review_prev: 'Precedente', review_next: 'Successiva', review_selector: 'Selettore recensioni', review_dots: ['Recensione 1','Recensione 2','Recensione 3'], review_source_aria: 'Fonte recensione', review_ratings: ['5 su 5 stelle','5 su 5 stelle','4 su 5 stelle'], reviews: [['“Un servizio impeccabile. Dal check-in fino all’ultimo dettaglio del room service, tutto è stato discreto, caloroso e perfettamente coordinato.”','Tripadvisor'],['“Le suite sono silenziose e rifinite a un livello eccellente. La posizione è ideale e il concierge ha gestito prenotazioni e trasferimenti in pochi minuti.”','Google Reviews'],['“Il lounge e il bar sono un sogno: atmosfera intima, cocktail precisi e musica al volume giusto. Tornerei senza esitazione.”','Booking']],
+        gallery_kicker: 'Galleria', gallery_title: 'Un’identità visiva coerente', gallery_alts: ['Lobby','Camera','Terrazza','Dettaglio premium','Facciata','Suite'],
+        contact_title: 'Contatti', contact_body: 'Indirizzo, mappa, telefoni e policy.', contact_labels: ['Indirizzo','Telefono','Email'], map_aria: 'Mappa', back_to_top: 'Torna su',
+        modal_title: 'Dettagli', modal_book: 'Prenota', modal_close: 'Chiudi', modal_aria: 'Dettagli camera', modal_close_aria: 'Chiudi', modal_book_toast: 'Prenota la tua camera', modal_note_label: 'Nota', modal_thumb_aria: 'Vedi immagine {n} di {title}', booking_error_dates: 'Inserisci date valide per simulare la disponibilità.', booking_error_order: 'Il check-out deve essere successivo al Check-in.', booking_result_prefix: 'Disponibilità simulata:', toast_simulated: 'Fatto. Disponibilità simulata (senza back-end).', simulated_action_toast: 'Azione simulata. Potrebbe aprire WhatsApp, un modulo o un motore di prenotazione.'
+      }
+    };
+
+    const ROOM_DETAILS = {
+      es: {
+        king: { title: 'Deluxe Room', img: 'assets/Fotos HQ/01_Room/01_Room-4.webp', gallery: ['assets/Fotos HQ/01_Room/01_Room-4.webp','assets/Fotos HQ/04_Room/04_Room-11.webp','assets/Fotos HQ/05_Room/05_Room-9.webp','assets/Fotos HQ/06_Room/06_Room-3.webp'], items: [['Tamaño','32–36 m²'],['Cama','King · linen premium'],['Baño','Mármol + ducha lluvia'],['Vista','Ciudad · luz natural']], note: 'Ideal para estadías cortas con confort silencioso.' },
+        suite:{ title:'Deluxe Room - 3 people', img:'assets/Fotos HQ/02_Room/02_Room-4.webp', gallery:['assets/Fotos HQ/02_Room/02_Room-4.webp','assets/Fotos HQ/07_Room/07_Room.webp','assets/Fotos HQ/10_Room/10_Room-7.webp','assets/Fotos HQ/fotos webp/Room8/08_Room-8.webp'], items:[['Tamaño','52–68 m²'],['Ambientes','Living privado + bar'],['Baño','Spa-style · bañera'],['Servicio','Concierge dedicado']], note:'Ritmo, amplitud y privacidad en cada detalle.' },
+        deluxe:{ title:'Deluxe Room - 6 people', img:'assets/Fotos HQ/03_Room/03_Room-14.webp', gallery:['assets/Fotos HQ/fotos webp/Room3/03_Room-15.webp','assets/Fotos HQ/fotos webp/Room3/03_Room-6.webp','assets/Fotos HQ/fotos webp/Room9/09_Room-18.webp','assets/Fotos HQ/fotos webp/Room9/09_Room.webp'], items:[['Tamaño','38–42 m²'],['Diseño','Texturas premium'],['Baño','Mármol · amenities'],['Ambiente','Iluminación cálida']], note:'El balance perfecto entre diseño y calma.' },
+        apartment:{ title:'Suite Room', img:'assets/Fotos HQ/fotos webp/Room11/11_Room (1).webp', gallery:['assets/Fotos HQ/fotos webp/Room11/11_Room-4.webp','assets/Fotos HQ/fotos webp/Room11/11_Room-14.webp','assets/Fotos HQ/fotos webp/Room11/11_Room-11.webp','assets/Fotos HQ/fotos webp/Room12/12_Room-6.webp'], items:[['Tamaño','45–55 m²'],['Ambiente','Suite premium'],['Comodidad','Silencio y amplitud'],['Ideal','Para 3 personas']], note:'Una opción amplia y serena para una estadía más privada.' }
+      },
+      en: {
+        king: { title: 'Deluxe Room', img: 'assets/Fotos HQ/01_Room/01_Room-4.webp', gallery: ['assets/Fotos HQ/01_Room/01_Room-4.webp','assets/Fotos HQ/04_Room/04_Room-11.webp','assets/Fotos HQ/05_Room/05_Room-9.webp','assets/Fotos HQ/06_Room/06_Room-3.webp'], items: [['Size','32–36 m²'],['Bed','King · premium linen'],['Bathroom','Marble + rain shower'],['View','City · natural light']], note: 'Ideal for short stays with quiet comfort.' },
+        suite:{ title:'Deluxe Room - 3 people', img:'assets/Fotos HQ/02_Room/02_Room-4.webp', gallery:['assets/Fotos HQ/02_Room/02_Room-4.webp','assets/Fotos HQ/07_Room/07_Room.webp','assets/Fotos HQ/10_Room/10_Room-7.webp','assets/Fotos HQ/fotos webp/Room8/08_Room-8.webp'], items:[['Size','52–68 m²'],['Spaces','Private living room + bar'],['Bathroom','Spa-style · bathtub'],['Service','Dedicated concierge']], note:'Rhythm, space, and privacy in every detail.' },
+        deluxe:{ title:'Deluxe Room - 6 people', img:'assets/Fotos HQ/03_Room/03_Room-14.webp', gallery:['assets/Fotos HQ/fotos webp/Room3/03_Room-15.webp','assets/Fotos HQ/fotos webp/Room3/03_Room-6.webp','assets/Fotos HQ/fotos webp/Room9/09_Room-18.webp','assets/Fotos HQ/fotos webp/Room9/09_Room.webp'], items:[['Size','38–42 m²'],['Design','Premium textures'],['Bathroom','Marble · amenities'],['Ambience','Warm lighting']], note:'The perfect balance between design and calm.' },
+        apartment:{ title:'Suite Room', img:'assets/Fotos HQ/fotos webp/Room11/11_Room (1).webp', gallery:['assets/Fotos HQ/fotos webp/Room11/11_Room-4.webp','assets/Fotos HQ/fotos webp/Room11/11_Room-14.webp','assets/Fotos HQ/fotos webp/Room11/11_Room-11.webp','assets/Fotos HQ/fotos webp/Room12/12_Room-6.webp'], items:[['Size','45–55 m²'],['Style','Premium suite'],['Comfort','Quiet and space'],['Ideal','For 3 guests']], note:'A spacious and serene option for a more private stay.' }
+      },
+      it: {
+        king: { title: 'Deluxe Room', img: 'assets/Fotos HQ/01_Room/01_Room-4.webp', gallery: ['assets/Fotos HQ/01_Room/01_Room-4.webp','assets/Fotos HQ/04_Room/04_Room-11.webp','assets/Fotos HQ/05_Room/05_Room-9.webp','assets/Fotos HQ/06_Room/06_Room-3.webp'], items: [['Dimensione','32–36 m²'],['Letto','King · biancheria premium'],['Bagno','Marmo + doccia rain'],['Vista','Città · luce naturale']], note: 'Ideale per soggiorni brevi con comfort silenzioso.' },
+        suite:{ title:'Deluxe Room - 3 people', img:'assets/Fotos HQ/02_Room/02_Room-4.webp', gallery:['assets/Fotos HQ/02_Room/02_Room-4.webp','assets/Fotos HQ/07_Room/07_Room.webp','assets/Fotos HQ/10_Room/10_Room-7.webp','assets/Fotos HQ/fotos webp/Room8/08_Room-8.webp'], items:[['Dimensione','52–68 m²'],['Ambienti','Living privato + bar'],['Bagno','Spa-style · vasca'],['Servizio','Concierge dedicato']], note:'Ritmo, ampiezza e privacy in ogni dettaglio.' },
+        deluxe:{ title:'Deluxe Room - 6 people', img:'assets/Fotos HQ/03_Room/03_Room-14.webp', gallery:['assets/Fotos HQ/fotos webp/Room3/03_Room-15.webp','assets/Fotos HQ/fotos webp/Room3/03_Room-6.webp','assets/Fotos HQ/fotos webp/Room9/09_Room-18.webp','assets/Fotos HQ/fotos webp/Room9/09_Room.webp'], items:[['Dimensione','38–42 m²'],['Design','Texture premium'],['Bagno','Marmo · amenities'],['Atmosfera','Illuminazione calda']], note:'Il perfetto equilibrio tra design e quiete.' },
+        apartment:{ title:'Suite Room', img:'assets/Fotos HQ/fotos webp/Room11/11_Room (1).webp', gallery:['assets/Fotos HQ/fotos webp/Room11/11_Room-4.webp','assets/Fotos HQ/fotos webp/Room11/11_Room-14.webp','assets/Fotos HQ/fotos webp/Room11/11_Room-11.webp','assets/Fotos HQ/fotos webp/Room12/12_Room-6.webp'], items:[['Dimensione','45–55 m²'],['Stile','Suite premium'],['Comfort','Silenzio e ampiezza'],['Ideale','Per 3 ospiti']], note:'Un’opzione ampia e serena per un soggiorno più privato.' }
+      }
+    };
+
+    let currentLang = 'es';
+    function t(key){ return (L[currentLang] && L[currentLang][key]) || L.es[key] || ''; }
+    function setText(sel, val, all){
+      if(all){ document.querySelectorAll(sel).forEach(el => el.textContent = val); return; }
+      const el = document.querySelector(sel); if(el) el.textContent = val;
+    }
+    function setHTML(sel, val){ const el = document.querySelector(sel); if(el) el.innerHTML = val; }
+    function setAttr(sel, attr, val, all){
+      if(all){ document.querySelectorAll(sel).forEach(el => el.setAttribute(attr, val)); return; }
+      const el = document.querySelector(sel); if(el) el.setAttribute(attr, val);
+    }
+    function setOptions(selectName, values){
+      const sel = document.querySelector('select[name="' + selectName + '"]');
+      if(!sel) return;
+      Array.from(sel.options).forEach((opt, i) => { if(values[i]) opt.textContent = values[i]; });
+    }
+    function applySiteLanguage(lang){
+      currentLang = L[lang] ? lang : 'es';
+      const dict = L[currentLang];
+      document.documentElement.lang = currentLang;
+      document.title = dict.html_title;
+      try { localStorage.setItem('cm_lang', currentLang); } catch(e){}
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('is-active', btn.dataset.lang === currentLang));
+
+      setText('.skip-link', dict.skip_link);
+      setAttr('#menuBtn', 'aria-label', dict.menu_aria); setAttr('#closeDrawerBtn', 'aria-label', dict.close_menu_aria); setAttr('.brand.brand-logo', 'aria-label', dict.home_aria); setAttr('.drawer-panel', 'aria-label', dict.drawer_panel_aria); setAttr('.lang-switch', 'aria-label', dict.lang_switch_aria);
+      setText('.hero .kicker', dict.hero_kicker); setText('.hero-title', dict.hero_title); setText('.hero-lead', dict.hero_lead); setText('.hero-cta .btn.btn-primary', dict.hero_cta_primary); setText('.header-actions .btn.btn-ghost', dict.hero_cta_secondary); setText('.hero-cta .btn.btn-outline', dict.hero_cta_tertiary); setAttr('#scrollDownBtn', 'aria-label', dict.scroll_down_aria);
+      setAttr('#bookingCard', 'aria-label', dict.booking_panel_aria); setText('#bookingCard h3', dict.booking_title); setText('label .label[data-i18n="booking_checkin"]', dict.booking_checkin); setText('label .label[data-i18n="booking_checkout"]', dict.booking_checkout); setText('label .label[data-i18n="booking_guests"]', dict.booking_guests); setText('label .label[data-i18n="booking_rooms"]', dict.booking_rooms); setText('#bookingForm button[type="submit"]', dict.booking_cta); setOptions('guests', dict.guest_opts); setOptions('rooms', dict.room_opts);
+
+      const exp = document.querySelector('#experience');
+      if(exp){
+        const texts = exp.querySelectorAll('.panel-text');
+        if(texts[0]){ texts[0].querySelector('.display').innerHTML = dict.experience_title; texts[0].querySelectorAll('.body')[0].textContent = dict.experience_body_1; texts[0].querySelectorAll('.body')[1].textContent = dict.experience_body_2; texts[0].querySelector('.link').innerHTML = dict.experience_link; }
+        if(texts[1]){ texts[1].querySelector('.display').textContent = dict.inside_title; texts[1].querySelector('.body').textContent = dict.inside_body; const pills=texts[1].querySelectorAll('.pill'); pills.forEach((p,i)=>{ if(dict.inside_pills[i]) p.textContent = dict.inside_pills[i]; }); texts[1].querySelector('.btn').textContent = dict.inside_cta; }
+        const imgs = exp.querySelectorAll('img'); if(imgs[0]) imgs[0].alt = dict.experience_img_alt_1; if(imgs[1]) imgs[1].alt = dict.experience_img_alt_2;
+      }
+
+      const rooms = document.querySelector('#rooms');
+      if(rooms){ const head = rooms.querySelector('.section-head'); head.querySelector('.kicker').textContent = dict.rooms_kicker; head.querySelector('.section-title').textContent = dict.rooms_title; const chips = head.querySelectorAll('.chip span'); if(chips[0]) chips[0].textContent = dict.chip_all; if(chips[1]) chips[1].textContent = dict.chip_room; if(chips[2]) chips[2].textContent = dict.chip_suite; const cards = rooms.querySelectorAll('.room-card'); cards.forEach((card, i)=>{ const per=card.querySelector('.per'); if(per) per.textContent = dict.per_night; const btn=card.querySelector('[data-modal-open]'); if(btn) btn.textContent = dict.view_details; if(i===0){ card.querySelector('.room-title').textContent = dict.room_king_title; card.querySelector('.fine').textContent = dict.room_king_desc; card.querySelector('img').alt = dict.room_king_title; } if(i===1){ card.querySelector('.room-title').textContent = dict.room_suite_title; card.querySelector('.fine').textContent = dict.room_suite_desc; card.querySelector('img').alt = dict.room_suite_title; } if(i===2){ card.querySelector('.room-title').textContent = dict.room_deluxe_title; card.querySelector('.fine').textContent = dict.room_deluxe_desc; card.querySelector('img').alt = dict.room_deluxe_title; } if(i===3){ card.querySelector('.room-title').textContent = dict.room_apartment_title; card.querySelector('.fine').textContent = dict.room_apartment_desc; card.querySelector('img').alt = dict.room_apartment_title; } }); }
+
+      const services = document.querySelector('#services');
+      if(services){ const head = services.querySelector('.section-head'); head.querySelector('.kicker').textContent = dict.services_kicker; head.querySelector('.section-title').textContent = dict.services_title; head.querySelector('.body.subtle').textContent = dict.services_subtitle; services.querySelectorAll('.service-card').forEach((card, i)=>{ if(dict.services[i]){ const [title, body] = dict.services[i]; const h = card.querySelector('.service-title'); const p = card.querySelector('.service-text'); if(h) h.textContent = title; if(p) p.textContent = body; } }); }
+
+      const features = document.querySelectorAll('.feature');
+      if(features[0]){ const el=features[0]; el.querySelector('.kicker').textContent = dict.dining_kicker; el.querySelector('.section-title').textContent = dict.dining_title; el.querySelector('.body').textContent = dict.dining_body; el.querySelectorAll('.list li').forEach((li,i)=>{ if(dict.dining_list[i]) li.textContent = dict.dining_list[i]; }); el.querySelector('.btn').textContent = dict.dining_cta; const img=el.querySelector('img'); if(img) img.alt = dict.dining_alt; }
+      const spa = document.querySelector('#spa');
+      if(spa){ spa.querySelector('.kicker').textContent = dict.wellness_kicker; spa.querySelector('.section-title').textContent = dict.wellness_title; spa.querySelector('.body').textContent = dict.wellness_body; spa.querySelectorAll('.pill').forEach((pill,i)=>{ if(dict.wellness_pills[i]) pill.textContent = dict.wellness_pills[i]; }); spa.querySelector('.link').innerHTML = dict.wellness_cta + ' <span aria-hidden="true">→</span>'; const img=spa.querySelector('img'); if(img) img.alt = dict.wellness_alt; }
+      const attractions = document.querySelector('#attractions');
+      if(attractions){ attractions.querySelector('.kicker').textContent = dict.attractions_kicker; attractions.querySelector('.section-title').textContent = dict.attractions_title; attractions.querySelector('.body').textContent = dict.attractions_body; attractions.querySelectorAll('.list li').forEach((li,i)=>{ if(dict.attractions_list[i]) li.textContent = dict.attractions_list[i]; }); attractions.querySelector('.btn').textContent = dict.attractions_cta; const img=attractions.querySelector('img'); if(img) img.alt = dict.attractions_alt; }
+
+      const reviews = document.querySelector('#reviews');
+      if(reviews){ reviews.querySelector('.kicker').textContent = dict.reviews_kicker; reviews.querySelector('.section-title').textContent = dict.reviews_title; reviews.querySelector('.body.subtle').textContent = dict.reviews_subtitle; setAttr('.review-prev','aria-label',dict.review_prev); setAttr('.review-next','aria-label',dict.review_next); setAttr('.reviews-dots','aria-label',dict.review_selector); reviews.querySelectorAll('.dot').forEach((dot,i)=>{ if(dict.review_dots[i]) dot.setAttribute('aria-label', dict.review_dots[i]); }); reviews.querySelectorAll('.review-card').forEach((card,i)=>{ if(dict.reviews[i]){ const [text,src]=dict.reviews[i]; card.querySelector('.review-text').textContent = text; card.querySelector('.review-source').setAttribute('aria-label', dict.review_source_aria); card.querySelector('.review-rating').setAttribute('aria-label', dict.review_ratings[i] || ''); card.querySelector('.source-text').textContent = src; } }); }
+
+      const gallery = document.querySelector('#gallery');
+      if(gallery){ gallery.querySelector('.kicker').textContent = dict.gallery_kicker; gallery.querySelector('.section-title').textContent = dict.gallery_title; gallery.querySelectorAll('.masonry img').forEach((img,i)=>{ if(dict.gallery_alts[i]) img.alt = dict.gallery_alts[i]; }); }
+      const contact = document.querySelector('#contact');
+      if(contact){ contact.querySelector('.section-title').textContent = dict.contact_title; contact.querySelector('.body').textContent = dict.contact_body; contact.querySelectorAll('.contact-item .label').forEach((el,i)=>{ if(dict.contact_labels[i]) el.textContent = dict.contact_labels[i]; }); contact.querySelector('.contact-map').setAttribute('aria-label', dict.map_aria); contact.querySelector('.contact-actions .btn').textContent = dict.back_to_top; }
+
+      setText('#modalTitle', dict.modal_title); setText('#modalBookBtn', dict.modal_book); setText('#modalCloseBtn', dict.modal_close); setAttr('.modal-panel','aria-label',dict.modal_aria); setAttr('#closeModalBtn','aria-label',dict.modal_close_aria);
+      if(document.getElementById('modal')?.classList.contains('is-open') && document.getElementById('modal').dataset.roomKey){ window.openModal(document.getElementById('modal').dataset.roomKey); }
+    }
+
+    window.fmtDate = function(d){
+      try {
+        const x = new Date(d);
+        if(Number.isNaN(x.getTime())) return null;
+        const locale = currentLang === 'it' ? 'it-IT' : (currentLang === 'en' ? 'en-US' : 'es-AR');
+        return x.toLocaleDateString(locale, {year:'numeric', month:'short', day:'2-digit'});
+      } catch(e){ return null; }
+    };
+
+    window.showToast = function(msg){
+      const toast = document.getElementById('toast');
+      if(!toast) return;
+      let finalMsg = msg;
+      const d = L[currentLang] || L.es;
+      if(msg === 'Listo. Simulamos disponibilidad (sin back-end).') finalMsg = d.toast_simulated;
+      else if(msg === 'Book your room') finalMsg = d.modal_book_toast;
+      else if(msg === 'Acción simulada. Esto puede abrir WhatsApp, formulario o motor de reservas.') finalMsg = d.simulated_action_toast;
+      toast.textContent = finalMsg;
+      toast.classList.add('is-show');
+      clearTimeout(window.__cmToastTimer);
+      window.__cmToastTimer = setTimeout(() => toast.classList.remove('is-show'), 2400);
+    };
+
+    window.openModal = function(key){
+      const langRooms = ROOM_DETAILS[currentLang] || ROOM_DETAILS.es;
+      const d = langRooms[key];
+      if(!d) return;
+      const modal = document.getElementById('modal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalContent = document.getElementById('modalContent');
+      if(!modal || !modalTitle || !modalContent) return;
+      modal.dataset.roomKey = key;
+      modalTitle.textContent = d.title;
+      const meta = d.items.map(([k,v]) => '<div class="kv"><div class="k">' + k + '</div><div class="v">' + v + '</div></div>').join('');
+      const gallery = (d.gallery && d.gallery.length ? d.gallery : [d.img]).map((src, idx) => '<button class="modal-thumb ' + (idx===0?'is-active':'') + '" type="button" data-modal-thumb="' + src + '" aria-label="' + (t('modal_thumb_aria').replace('{n}', String(idx+1)).replace('{title}', d.title)) + '"><img src="' + src + '" alt="' + d.title + ' ' + (idx+1) + '"></button>').join('');
+      modalContent.innerHTML = '<div class="modal-media-stack"><img src="' + d.img + '" alt="' + d.title + '" id="modalMainImage"><div class="modal-gallery">' + gallery + '</div></div><div class="modal-meta">' + meta + '<div class="kv"><div class="k">' + t('modal_note_label') + '</div><div class="v">' + d.note + '</div></div></div>';
+      const mainImage = modalContent.querySelector('#modalMainImage');
+      modalContent.querySelectorAll('[data-modal-thumb]').forEach(btn => btn.addEventListener('click', () => { const src = btn.dataset.modalThumb; if(mainImage) mainImage.src = src; modalContent.querySelectorAll('.modal-thumb').forEach(tn => tn.classList.remove('is-active')); btn.classList.add('is-active'); }));
+      modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+    };
+
+    const bookingForm = document.getElementById('bookingForm');
+    if(bookingForm && !bookingForm.dataset.i18nPatched){
+      bookingForm.dataset.i18nPatched = '1';
+      bookingForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        if (typeof openOctorateBooking === 'function') {
+          openOctorateBooking();
+        } else {
+          window.open('https://book.octorate.com/octobook/site/reservation/index.xhtml?siteKey=77b23b26cc9a0ad8b270bb51f7d04598', '_blank', 'noopener,noreferrer');
+        }
+      }, true);
+    }
+
+    function bindLanguageButtons(){
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if(btn.dataset.i18nBound === '1') return;
+        btn.dataset.i18nBound = '1';
+        btn.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); applySiteLanguage(btn.dataset.lang || 'es'); });
+      });
+    }
+
+    bindLanguageButtons();
+    const saved = (() => { try { return localStorage.getItem('cm_lang'); } catch(e){ return null; } })();
+    const initial = saved && L[saved] ? saved : ((navigator.language || 'es').toLowerCase().startsWith('it') ? 'it' : ((navigator.language || 'es').toLowerCase().startsWith('en') ? 'en' : 'es'));
+    applySiteLanguage(initial);
+    window.__applySiteLanguage = applySiteLanguage;
+  })();
+</script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+<script type="text/javascript" src="https://resx.octorate.com/octobook/resources/widget/js/form.js" data-sitekey="77b23b26cc9a0ad8b270bb51f7d04598"></script>
+
+</body>
+</html>
+
