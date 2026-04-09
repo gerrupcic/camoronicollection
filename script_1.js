@@ -251,6 +251,10 @@
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden","false");
       document.body.style.overflow = "hidden";
+      requestAnimationFrame(() => {
+        modalContent?.scrollTo({ top: 0, behavior: "auto" });
+        modal.querySelector(".modal-panel")?.scrollTo?.({ top: 0, behavior: "auto" });
+      });
     }
 
     function closeModal(){

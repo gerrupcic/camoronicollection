@@ -876,6 +876,10 @@
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden","false");
       document.body.style.overflow = "hidden";
+      requestAnimationFrame(() => {
+        modalContent?.scrollTo({ top: 0, behavior: "auto" });
+        modal.querySelector(".modal-panel")?.scrollTo?.({ top: 0, behavior: "auto" });
+      });
     }
 
     function closeModal(){
@@ -884,8 +888,24 @@
       document.body.style.overflow = "";
     }
 
-    $$("[data-modal-open]").forEach(btn => {
-      btn.addEventListener("click", () => openModal(btn.dataset.modalOpen));
+    $$('[data-modal-open]').forEach(btn => {
+      btn.addEventListener('click', () => openModal(btn.dataset.modalOpen));
+
+      const card = btn.closest('.room-card');
+      const media = card?.querySelector('.room-media');
+      if(media && !media.dataset.modalBound){
+        media.dataset.modalBound = '1';
+        media.setAttribute('role', 'button');
+        media.setAttribute('tabindex', '0');
+        media.setAttribute('aria-label', `Ver detalles de ${card?.querySelector('.room-title')?.textContent?.trim() || 'la habitación'}`);
+        media.addEventListener('click', () => openModal(btn.dataset.modalOpen));
+        media.addEventListener('keydown', (e) => {
+          if(e.key === 'Enter' || e.key === ' '){
+            e.preventDefault();
+            openModal(btn.dataset.modalOpen);
+          }
+        });
+      }
     });
     modalOverlay?.addEventListener("click", closeModal);
     closeModalBtn?.addEventListener("click", closeModal);
