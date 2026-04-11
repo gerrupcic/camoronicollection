@@ -1269,10 +1269,32 @@ body{
   .services-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px){
-  .services-grid{ grid-template-columns: 1fr; gap: 64px 60px; }
-  .service-card{ text-align:left; display:grid; grid-template-columns: 64px 1fr; gap: 14px; align-items:center; }
-  .service-icon{ margin:0; }
-  .service-text{ margin:0; max-width:none; }
+  .services-grid{ grid-template-columns: 1fr; gap: 40px; }
+  .service-card{
+    text-align:left;
+    display:grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 6px;
+    align-items:start;
+  }
+  .service-icon{
+    margin:0;
+    grid-column:1;
+    grid-row:1 / span 2;
+    align-self:start;
+  }
+  .service-title,
+  .service-text{
+    grid-column:2;
+  }
+  .service-title{
+    margin-bottom:0;
+  }
+  .service-text{
+    margin:0;
+    max-width:none;
+  }
 }
 
 
@@ -1592,4 +1614,47 @@ body{
 #modalBookBtn:hover{
   filter: brightness(1.02) !important;
   box-shadow: 0 18px 44px rgba(199,164,90,.28) !important;
+}
+
+
+/* ---------- SPA / REGIONAL PRODUCTS MOBILE SPACING ---------- */
+@media (max-width: 640px){
+  #spa .feature{
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+  #spa .feature-text{
+    max-width: none;
+  }
+  #spa .kicker{
+    margin-bottom: 12px;
+  }
+  #spa .section-title{
+    max-width: 10ch;
+    margin-bottom: 14px;
+    line-height: 1.05;
+  }
+  #spa .body{
+    max-width: 28ch;
+    margin: 0 0 20px;
+    line-height: 1.75;
+  }
+  #spa .pill-row{
+    gap: 10px;
+    margin: 0 0 22px;
+  }
+  #spa .pill{
+    padding: 9px 13px;
+  }
+  #spa .feature-media{
+    width: 100%;
+  }
+  #spa .feature-media img{
+    display: block;
+    width: min(100%, 260px);
+    margin: 0 auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 22px;
+  }
 }
