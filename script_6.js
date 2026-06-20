@@ -1,5 +1,5 @@
 
-  // i18n (ES / EN / IT)
+  // i18n (ES / EN / IT) CAMBIOS 20/06
   (function(){
     const dict = {
       es: {
