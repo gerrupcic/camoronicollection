@@ -1,6 +1,6 @@
 
     :root{
-      /* Palette: quiet luxury 20/6/26*/ 
+      /* Palette: quiet luxury */
       --bg:#0b0c10;
       --bg2:#101118;
       --ink:#0e0f12;
@@ -1656,5 +1656,122 @@ body{
     margin: 0 auto;
     aspect-ratio: 4 / 3;
     border-radius: 22px;
+  }
+}
+
+/* ===== CA Moroni: mobile header responsive fix =====
+   Prevents the booking button (RESERVAR / BOOK / PRENOTA) from being clipped
+   on narrow phones while keeping language selector usable. */
+.site-header{
+  overflow-x: clip;
+}
+.header-inner{
+  max-width: 100%;
+  gap: 12px;
+}
+.header-actions{
+  min-width: 0;
+  flex: 0 1 auto;
+}
+.header-actions .btn{
+  min-width: 0;
+}
+
+@media (max-width: 820px){
+  :root{
+    --container: min(1200px, calc(100vw - 24px));
+  }
+  .header-inner{
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+  }
+  .brand-logo{
+    justify-self: center;
+    min-width: 0;
+  }
+  .brand-logo img{
+    height: 50px;
+    max-width: 92px;
+    object-fit: contain;
+  }
+  .header-actions{
+    justify-self: end;
+    gap: 6px;
+  }
+  .header-actions .btn{
+    padding: 9px 11px;
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+  .lang-switch{
+    padding: 5px 6px;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .lang-btn{
+    height: 24px;
+    min-width: 27px;
+    padding: 0 6px;
+    font-size: 9.5px;
+    letter-spacing: .10em;
+  }
+}
+
+@media (max-width: 480px){
+  .header-inner{
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "menu actions";
+  }
+  #menuBtn{
+    grid-area: menu;
+    padding: 10px 8px;
+  }
+  .brand-logo{
+    display: none;
+  }
+  .header-actions{
+    grid-area: actions;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  .header-actions .btn-ghost[href="#rooms"]{
+    display: none;
+  }
+  #openBookingBtn{
+    flex: 0 0 auto;
+    max-width: none;
+    padding-inline: 12px;
+  }
+}
+
+@media (max-width: 360px){
+  :root{
+    --container: min(1200px, calc(100vw - 12px));
+  }
+  #menuBtn{
+    padding-inline: 6px;
+  }
+  .header-actions{
+    gap: 4px;
+  }
+  .lang-switch{
+    padding: 3px 4px;
+    gap: 2px;
+  }
+  .lang-btn{
+    height: 22px;
+    min-width: 23px;
+    padding: 0 4px;
+    font-size: 8.5px;
+    letter-spacing: .06em;
+  }
+  #openBookingBtn{
+    padding-inline: 9px;
+    font-size: 9px;
+    letter-spacing: .10em;
   }
 }
